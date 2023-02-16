@@ -5,7 +5,7 @@ using namespace std;
 int main() {
     float jarak_ke_bestie = 20.0; // jarak ke rumah Bestie dalam km
     float jarak_ke_random = 10.0; // jarak dari rumah Bestie ke tempat random dalam km
-    float efisiensi_bensin = 12.0; // efisiensi bensin mobil dalam km/liter
+    float efisiensi_bensin = 12.0; // efisiensi bensin mobil dalam liter
     float harga_bensin = 10000.0; // harga bensin per liter dalam rupiah
 
     float total_jarak = jarak_ke_bestie + jarak_ke_random + jarak_ke_bestie;
