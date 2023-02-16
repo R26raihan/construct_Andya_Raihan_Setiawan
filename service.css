@@ -1,0 +1,13 @@
+*{
+    padding: 0%;
+    margin: auto;
+    font-family: sans-serif;
+}
+.atas{
+    padding: 5px 0;
+    background-color: aqua;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}

@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: auto;
+    font-family: sans-serif;
+}
+.halaman1{
+    padding: 5px 0;
+    background-color: bisque;
+    border: 1px solid;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.halaman1 ul li{
+    display: inline-block;
+    color: white;
+    border: 5px solid white;
+}
+header{
+    height: 60vh;
+    border: 1px solid;
+}
+header h1{
+    padding: 5px;
+    position: relative;
+}
