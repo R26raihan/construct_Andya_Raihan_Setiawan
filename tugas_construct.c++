@@ -18,6 +18,9 @@ int main() {
     // Total biaya yang dikeluarkan = total bensin yang diperlukan * harga bensin per liter
 
     cout << "Total biaya bensin yang dikeluarkan oleh Alice adalah: Rp " << total_biaya << endl;
+     cout << "jika harga bensin 1 liternya = 10000 Rp dan alice mengeluarkan uangnya 41666 Rp untuk biaya bensin maka perkiraan bensin yang di gunakan alice sekitar 4 liter bensin"<<endl;
+
+
 
     return 0;
 }
