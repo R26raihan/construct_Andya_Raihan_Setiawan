@@ -1,0 +1,109 @@
+ .u-section-1 {
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('images/6689c77e59cb232e0043f4ee91d979eee1b7597880d69456a27a41539c90cfeae53764492468bf5a9b29191644e9faac170a34107e24e80b5da918_1280.jpg');
+  background-position: 50% 50%;
+}
+
+.u-section-1 .u-sheet-1 {
+  min-height: 571px;
+}
+
+.u-section-1 .u-text-1 {
+  font-weight: 700;
+  --animation-custom_in-translate_x: -200px;
+  --animation-custom_in-translate_y: 0px;
+  --animation-custom_in-opacity: 0;
+  --animation-custom_in-rotate: 0deg;
+  --animation-custom_in-scale: 1;
+  width: 441px;
+  margin: 226px auto 60px;
+}
+
+@media (max-width: 1199px) {
+  .u-section-1 .u-sheet-1 {
+    min-height: 471px;
+  }
+}
+
+@media (max-width: 991px) {
+   .u-section-1 {
+    background-position: 0% 40.08%;
+    background-size: 125%;
+  }
+
+  .u-section-1 .u-sheet-1 {
+    min-height: 361px;
+  }
+}
+
+@media (max-width: 767px) {
+   .u-section-1 {
+    background-position: 23.67% 42.79%;
+    background-size: auto 125%;
+  }
+
+  .u-section-1 .u-sheet-1 {
+    min-height: 271px;
+  }
+
+  .u-section-1 .u-text-1 {
+    width: auto;
+    margin-right: 190px;
+  }
+}
+
+@media (max-width: 575px) {
+   .u-section-1 {
+    background-position: 45.45% 41.07%;
+  }
+
+  .u-section-1 .u-sheet-1 {
+    min-height: 171px;
+  }
+
+  .u-section-1 .u-text-1 {
+    margin-top: 125px;
+    margin-right: 58px;
+  }
+}.u-section-2 .u-sheet-1 {
+  min-height: 1748px;
+}
+
+.u-section-2 .u-table-1 {
+  margin: 57px auto 0 0;
+}
+
+.u-section-2 .u-table-entity-1 {
+  min-height: 100px;
+}
+
+.u-section-2 .u-table-header-1 {
+  font-weight: 700;
+  background-image: none;
+}
+
+.u-section-2 .u-table-cell-6 {
+  background-image: none;
+}
+
+.u-section-2 .u-table-cell-11 {
+  background-image: none;
+}
+
+.u-section-2 .u-table-cell-16 {
+  background-image: none;
+}
+
+.u-section-2 .u-table-cell-21 {
+  background-image: none;
+}
+
+.u-block-c5a3-35 {
+  background-image: none;
+}
+
+@media (max-width: 1199px) {
+  .u-section-2 .u-table-1 {
+    margin-right: initial;
+    margin-left: initial;
+  }
+}
