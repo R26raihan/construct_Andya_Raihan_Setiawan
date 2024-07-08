@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep Disorder Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            display: block;
+            margin: 10px auto;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        .prediction-result {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .tips {
+            color: #333;
+            margin-top: 15px;
+        }
+
+        .tips ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 0;
+        }
+
+        .tips ul li {
+            margin-bottom: 5px;
+        }
+
+        .note {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #f5f5f5;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Sleep Disorder Prediction</h1>
+    </div>
+
+    <div class="container">
+        <p>This application helps predict sleep disorders based on various health and lifestyle factors. It uses a machine learning model to provide insights into sleep quality and potential disorders.</p>
+
+        <form action="/" method="post">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required><br>
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select><br>
+
+            <label for="occupation">Occupation:</label>
+            <select id="occupation" name="occupation">
+                <option value="Doctor">Doctor</option>
+                <option value="Teacher">Teacher</option>
+                <option value="Nurse">Nurse</option>
+                <option value="Engineer">Engineer</option>
+                <option value="Accountant">Accountant</option>
+                <option value="Lawyer">Lawyer</option>
+                <option value="Salesperson">Salesperson</option>
+                <option value="Others">Others</option>
+            </select><br>
+
+            <label for="bmi_category">BMI Category:</label>
+            <select id="bmi_category" name="bmi_category">
+                <option value="Normal">Normal</option>
+                <option value="Overweight">Overweight</option>
+                <option value="Obese">Obese</option>
+            </select><br>
+
+            <label for="sleep_duration">Sleep Duration (hours):</label>
+            <input type="number" step="0.1" id="sleep_duration" name="sleep_duration" required><br>
+
+            <label for="quality_of_sleep">Quality of Sleep (0-10):</label>
+            <input type="number" id="quality_of_sleep" name="quality_of_sleep" required><br>
+
+            <label for="physical_activity_level">Physical Activity Level (0-100):</label>
+            <input type="number" id="physical_activity_level" name="physical_activity_level" required><br>
+
+            <label for="stress_level">Stress Level (0-10):</label>
+            <input type="number" id="stress_level" name="stress_level" required><br>
+
+            <label for="heart_rate">Heart Rate (bpm):</label>
+            <input type="number" id="heart_rate" name="heart_rate" required><br>
+
+            <label for="daily_steps">Daily Steps Count:</label>
+            <input type="number" id="daily_steps" name="daily_steps" required><br>
+
+            <label for="systolic">Systolic Blood Pressure (mmHg):</label>
+            <input type="number" id="systolic" name="systolic" required><br>
+
+            <label for="diastolic">Diastolic Blood Pressure (mmHg):</label>
+            <input type="number" id="diastolic" name="diastolic" required><br>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        {% if prediction %}
+            <div class="prediction-result">
+                <h2>Prediction Result:</h2>
+                <p>{{ prediction }}</p>
+                {% if prediction == 'Normal' %}
+                    <div class="tips">
+                        <p>Tips for Maintaining Good Sleep:</p>
+                        <ul>
+                            <li>Stick to a sleep schedule, even on weekends.</li>
+                            <li>Practice a relaxing bedtime ritual.</li>
+                            <li>Avoid naps, especially in the afternoon.</li>
+                            <li>Exercise daily.</li>
+                            <li>Ensure your room has an ideal temperature, sound, and light.</li>
+                        </ul>
+                    </div>
+                {% elif prediction == 'Sleep Apnea' %}
+                    <div class="tips">
+                        <p>Tips for Managing Sleep Apnea:</p>
+                        <ul>
+                            <li>Maintain a healthy weight.</li>
+                            <li>Try sleeping on your side.</li>
+                            <li>Avoid alcohol and smoking.</li>
+                            <li>Use a CPAP device as prescribed.</li>
+                            <li>Practice good sleep hygiene.</li>
+                        </ul>
+                    </div>
+                {% elif prediction == 'Insomnia' %}
+                    <div class="tips">
+                        <p>Tips for Managing Insomnia:</p>
+                        <ul>
+                            <li>Stick to a consistent sleep schedule.</li>
+                            <li>Avoid caffeine and nicotine close to bedtime.</li>
+                            <li>Create a comfortable sleep environment.</li>
+                            <li>Manage stress and practice relaxation techniques.</li>
+                            <li>Limit screen time before bed.</li>
+                        </ul>
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+
+        <div class="note">
+            <p>Note: This application provides predictions based on input data and should not substitute professional medical advice. Consult a doctor for accurate diagnosis and treatment of sleep disorders.</p>
+        </div>
+    </div>
+</body>
+</html>
